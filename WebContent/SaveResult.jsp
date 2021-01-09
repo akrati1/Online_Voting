@@ -5,7 +5,11 @@
 Cast_Vote cast_vote = new Cast_Vote();
 Cast_Vote_Dao cast_vote_dao = new Cast_Vote_Dao();
 Integer i = cast_vote_dao.addRecord();
-out.println("Data Save Successfully....");
+if (i==1){
+out.println("Data Save Successfully....");}
+else{
+	out.println("error  ");
+}
 /*cast_vote.setNm(0);
 cast_vote.setSg(0);
 cast_vote.setAk(0);

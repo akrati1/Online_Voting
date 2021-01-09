@@ -31,7 +31,7 @@ public class Validate_Voter_Dao {
 	}
 	public Integer updateRecord(Validate_Voter v) throws SQLException
 	{		
-		sql="update validate_voter set userName = ?, aadhar_Number= ? where voter_id = ?";		
+		sql="update validate_voter set userName = ?, aadhar_Number= ? where voter_Id = ?";		
 		pst = conn.prepareStatement(sql);			
 		pst.setString(1,v.getUserName());
 		pst.setString(2,v.getAadhar_Number());
@@ -40,14 +40,14 @@ public class Validate_Voter_Dao {
 	}
 	public Integer deleteRecord(Validate_Voter v) throws SQLException
 	{
-		sql="delete from validate_voter where voter_id=?";
+		sql="delete from validate_voter where voter_Id=?";
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, v.getVoter_id());
 		return pst.executeUpdate();
 	}
 	public Validate_Voter findRecord(Validate_Voter v) throws SQLException
 	{
-		sql="select *  from validate_voter where voter_id=?";
+		sql="select *  from validate_voter where voter_Id=?";
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, v.getVoter_id());
 		//pst.setString(2, v.getAadhar_Number());
@@ -74,12 +74,12 @@ public class Validate_Voter_Dao {
 		}
 		return l;
 	}
-	public Integer validate(Validate_Voter v) throws SQLException
+	public Integer validate(Validate_Voter vv) throws SQLException
 	{
-		sql="select *  from validate_voter where voter_id=? and aadhar_Number= ?";
+		sql="select *  from validate_voter where voter_Id=? and aadhar_Number= ?";
 		pst = conn.prepareStatement(sql);
-		pst.setString(1, v.getVoter_id());
-		pst.setString(2, v.getAadhar_Number());
+		pst.setString(1, vv.getVoter_id());
+		pst.setString(2, vv.getAadhar_Number());
 		rs=pst.executeQuery();
 		if(rs.next())
 		{

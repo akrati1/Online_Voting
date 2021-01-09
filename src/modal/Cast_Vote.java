@@ -6,6 +6,8 @@ private static int sg=0;
 private static int ak=0;
 private static int mw=0;
 private static int lpy=0;
+
+
 public static int getNm() {
 	return nm;
 }

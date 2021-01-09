@@ -10,6 +10,14 @@ public class Voter{
 	private String email_Id;
 	private String user_Password;
 	private String address;
+	private static int count;
+
+	public static int getCount() {
+		return count;
+	}
+	public static void setCount(int count) {
+		Voter.count = count;
+	}
 	public String getUserName() {
 		return userName;
 	}

@@ -71,12 +71,12 @@ while(itr.hasNext())
 out.println("</table>");
 
 
-/*cast_vote.setNm(0);
+cast_vote.setNm(0);
 cast_vote.setSg(0);
 cast_vote.setAk(0);
 cast_vote.setMw(0);
 cast_vote.setLpy(0);
-*/
+
 %><br><br>
 <button type="submit" style="margin-left: 45%; " ><a href="AdminLoginScreen.jsp" style="text-decoration: none"> Back</a></button>
 

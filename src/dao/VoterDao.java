@@ -1,6 +1,7 @@
 
 
 package dao;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -22,7 +23,7 @@ import modal.Voter;
 		
 		public Integer addRecord(Voter v) throws SQLException
 		{
-			sql="insert into voter values(?,?,?,?,?,?,?,?,?)";
+			sql="insert into voter values(?,?,?,?,?,?,?,?,?,0)";
 			pst = conn.prepareStatement(sql);		
 			pst.setString(1,v.getUserName());
 			pst.setString(2,v.getVoter_id());
@@ -38,7 +39,7 @@ import modal.Voter;
 		public Integer updateRecord(Voter v) throws SQLException
 		{
 			
-			sql="update voter userName = ?,aadhar_Number= ?,gender= ?,dob= ?,mobile_No= ?,email_Id= ?,user_Password= ?,"
+			sql="update voter set userName = ?,aadhar_Number= ?,gender= ?,dob= ?,mobile_No= ?,email_Id= ?,user_Password= ?,"
 					+ "address= ?,where voter_id = ?";		
 			pst = conn.prepareStatement(sql);			
 			pst.setString(1,v.getUserName());
@@ -61,7 +62,7 @@ import modal.Voter;
 		}
 		public Voter findRecord(Voter v) throws SQLException
 		{
-			sql="select *  from voter where voter_id=?";
+			sql="select * from voter where voter_id=?";
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, v.getVoter_id());
 			rs=pst.executeQuery();
@@ -75,11 +76,14 @@ import modal.Voter;
 			v.setEmail_Id(rs.getString(7));
 			v.setUser_Password(rs.getString(8));
 			v.setAddress(rs.getString(9));
+			v.setCount(rs.getInt(10));
 			return v;
 		}
+		
 		public List<Voter> findAll() throws SQLException
 		{
-			sql = "select * from voter";
+			sql="select userName,voter_Id,aadhar_Number,gender,dob,mobile_No,"
+					+ " email_Id,userPassword,address from voter";
 			pst = conn.prepareStatement(sql);
 			rs=pst.executeQuery();
 			List<Voter> l = new ArrayList<Voter>();
@@ -100,6 +104,17 @@ import modal.Voter;
 			}
 			return l;
 		}
+	
+		
+		 
+		public int  updateCount(Voter v)throws IOException,SQLException {
+			sql ="update voter set count=? where voter_id=?";
+			pst=conn.prepareStatement(sql);
+			pst.setInt(1,v.getCount());
+			pst.setString(2, v.getVoter_id());
+			return pst.executeUpdate();
+		}
+		
 
 	}
 

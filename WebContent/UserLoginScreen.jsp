@@ -21,10 +21,10 @@
 <div class="container">
 <ul>
 
-<li> <div class="dropdown">
+<%-- <li> <div class="dropdown">
 <button class="dropbtn"><a href="Home.jsp">Home</a>
 <i class="fa fa-caret-down"></i>
-</button></li>
+</button></li>--%>
 <li> <div class="dropdown">
 <button class="dropbtn"><a href="https://eci.gov.in/">About EC</a>
 <i class="fa fa-caret-down"></i>
@@ -41,18 +41,8 @@
 </div>
 </div></li>
 
-<li><div class="dropdown"><button class="dropbtn">Login <i class="fa fa-caret-down"></i></button>
-<div class="dropdown-content">
-<a href="UserLogin.jsp" style="color:maroon;">User Login</a>
-<a href="CandidateLogin.jsp" style="color:maroon;">Candidate Login</a>
-<a href="AdminLogin.jsp" style="color:maroon;">Admin Login</a>
-</div>
-</div> </li>
-<li> <div class="dropdown"><button class="dropbtn">Register <i class="fa fa-caret-down"></i></button>
-<div class="dropdown-content">
-<a href="RegisterCandidate.jsp" style="color:maroon;">Candidate Register</a>
-<a href="RegisterVoter.jsp" style="color:maroon;">Voter Register</a></div>
-</div></li>
+
+
 </ul>
 </div>
 
@@ -61,12 +51,14 @@
 
 <div class="vote-box">
 <h1 id="castvote">Cast Your Vote</h1>
+<% String vid=(String)application.getAttribute("vid");
+out.println("welcome"+vid); %>
 <div class="vote-innerbox">
 
 <div class="party-list">
 <ol>
 <div class="pp" align="left"><li>Bhartiya Janta Party <img src="css/bjp.jpeg" width="50p" height="50" align="right"></div>
-<!--<div class="logo1"><img src="bjp.jpeg" width="50p" height="50" align="right"></div>-->
+<!-- <div class="logo1"><img src="bjp.jpeg" width="50p" height="50" align="right"></div> -->
 <div class= "candidates" >Narendra Modi: <input type="radio" name="cand"  value="nm" class="radio-button-txt"  required ></div>
 </li><br><br>
 

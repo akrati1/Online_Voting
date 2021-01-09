@@ -25,7 +25,6 @@
 <ul><align="justify">
 <ol>
 <a href='ChangeName.jsp'><font color="black">1. Change Name</a><br><br></font>
-<a href='PhoneNumber.jsp'><font color="black">2. Change Phone Number</a><br><br></font>
 <a href='ChangePassword.jsp'><font color="black">3. Change Password</a><br><br></font>
 </ol>
 </align>

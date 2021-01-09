@@ -43,7 +43,7 @@
 			<ul>
 			
 			<li><div class="dropdown">
-    			<button class="dropbtn"><a href="DeleteVoter.jsp">back </a>
+    			<button class="dropbtn"><a href="DeleteVoter.jsp">Back </a>
      					 <i class="fa fa-caret-down"></i>
   					  </button></li>
 				<%-- 	
@@ -66,7 +66,7 @@
    
    
    out.println("<table border='1' width='80%' align='center'>");
-   out.println("<tr><td>NO</td><td>NAME</td><td>SAL</td></tr>");
+   out.println("<tr><td>Voter Name</td><td>VoterID</td><td>AdharNumber</td></tr>");
    out.println("<tr>");
    out.println("<td>" + v.getUserName()+"</td>");
    out.println("<td>" + v.getVoter_id() +"</td>");

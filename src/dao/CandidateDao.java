@@ -37,7 +37,7 @@ import modal.Candidate;
 		public Integer updateRecord(Candidate c) throws SQLException
 		{
 			
-			sql="update candidate userName = ?,party_Affiliation=?,aadhar_Number= ?,gender= ?,dob= ?,mobile_No= ?,email_Id= ?,user_Password= ?,"
+			sql="update candidate set userName = ?,party_Affiliation=?,aadhar_Number= ?,gender= ?,dob= ?,mobile_No= ?,email_Id= ?,user_Password= ?,"
 					+ "address= ?,where candEnrollId = ?";		
 			pst = conn.prepareStatement(sql);			
 			pst.setString(1,c.getUserName());

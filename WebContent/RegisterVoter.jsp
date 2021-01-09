@@ -38,7 +38,7 @@
 
 <li><div class="dropdown"><button class="dropbtn">Login <i class="fa fa-caret-down"></i></button>
 <div class="dropdown-content">
-<a href="UserLogin.jsp" style="color:maroon;">User Login</a>
+<a href="UserLogin.jsp" style="color:maroon;">Voter Login</a>
 <a href="CandidateLogin.jsp" style="color:maroon;">Candidate Login</a>
 <a href="AdminLogin.jsp" style="color:maroon;">Admin Login</a>
 </div>
@@ -64,7 +64,7 @@ Others: <input type="radio" name="gender" value="Others" class="radio-button-txt
 <br/>
 <span>Date of Birth: </span><input type="date" name="dob"value="2002-12-31"min="1970-01-01" max="2002-12-31" autocomplete="off">
 <!--  <input type="text" name="dob" class="input-field" placeholder="Date of birth" required> -->
-<input type="tel" pattern="^(6|7|8|9)\d{9}$" size="40" name="mobile_No" class="input-field" placeholder="Mobile No" title="Number must contain 10 digits" required>
+<input type="tel" pattern="^(5|6|7|8|9)\d{9}$" size="10" name="mobile_No" class="input-field" placeholder="Mobile No" title="Number must contain 10 digits" required>
 <input type="email" size="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$*"name ="email_Id" class="input-field" placeholder="Email-Id" title="Enter Email in this format ex:xyz@gamil.com" required>
 <input type="password" pattern="[A-z a-z 0-9]{5,10}" size="10" name ="user_Password" class="input-field" placeholder="User Password" title="Enter at least 5-letter and max 10-letter password :Don't use special characters " required>
 <input type="text" name="address" size="50" pattern="([a-zA-Z0-9]| |/|\\|@|-|\$|,|&){5,50}"  class="input-field" placeholder="Address" title="Enter Valid 50-letter Address ex:E - 142 B , Delhi" required>

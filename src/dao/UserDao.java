@@ -1,9 +1,12 @@
 
 package dao;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import dao.Myconnection;
 import modal.Usermodal;
 import modal.adminmodal;
@@ -57,6 +60,23 @@ public class UserDao {
 			  return false;
 		    }
       }
+	public int  updatename(adminmodal user ) throws IOException,SQLException {
+		sql= "update admin set aname=? where apass=?";
+		pst=conn.prepareStatement(sql);
+		pst.setString(1,user.getAname());
+		pst.setInt(2,user.getApass());
+		return  pst.executeUpdate();
+		
+	}
 	
+	public int updatepass( adminmodal user)throws IOException,SQLException {
+		sql="update admin set apass=? where aname=?";
+		pst=conn.prepareStatement(sql);
+		pst.setInt(1,user.getApass());
+		pst.setString(2,user.getAname());
+		return pst.executeUpdate();
+		
+		
+	}
 }
 

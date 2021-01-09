@@ -39,7 +39,7 @@
     			            </div>		 
             </div></li>
 				
-				<li><div class="dropdown"><button class="dropbtn">Login <i class="fa fa-caret-down"></i></button>
+				<%-- --%><li><div class="dropdown"><button class="dropbtn">Login <i class="fa fa-caret-down"></i></button>
     				       <div class="dropdown-content">
      					          <a href="UserLogin.jsp" style="color:maroon;">Voter Login</a>
      						      <a href="CandidateLogin.jsp" style="color:maroon;">Candidate Login</a>

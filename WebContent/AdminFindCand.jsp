@@ -41,7 +41,7 @@
 			<ul>
 			
 			<li><div class="dropdown">
-    			<button class="dropbtn"><a href="AdminLoginScreen.jsp">back </a>
+    			<button class="dropbtn"><a href="AdminLoginScreen.jsp">Back </a>
      					 <i class="fa fa-caret-down"></i>
   					  </button></li>
 				<%-- --%>
@@ -66,7 +66,7 @@
 	      
 	   
     out.println("<table border='1' width='80%' align='center'>");
-    out.println("<tr><td>NO</td><td>NAME</td><td>SAL</td></tr>");
+    out.println("<tr><td>Candidate Name</td><td>Candidate EnrollmentID</td><td>PartyAffiliation</td><td>AdharNumber</td></tr>");
     out.println("<tr>");
     out.println("<td>" + val_can_mod.getUserName()+"</td>");
     out.println("<td>" + val_can_mod.getCandEnrollId() +"</td>");

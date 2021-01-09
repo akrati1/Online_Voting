@@ -41,21 +41,19 @@ int n = val_voter_dao.validate(val_voter);
 /*End of Changes done in code on 30-12-2020*/
 if(n>0)
 {
-VoterDao voterDao = new VoterDao();
-Integer i = voterDao.addRecord(voter);
-    if (i==1)
+ VoterDao voterDao = new VoterDao();
+ Integer i = voterDao.addRecord(voter);
+    if(i==1)
     {
 	response.sendRedirect("UserLogin.jsp");
-} else {
+     }else {
 	response.sendRedirect("error.jsp");
+   }
 }
-}
-else
-{
+else{
     out.println("Invalid Voter Id");
-}
-}
-catch(SQLException e){
+   }
+}catch(SQLException e){
    out.println("User with this Candidate Id already exist");
 }
 %>
